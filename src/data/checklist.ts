@@ -130,11 +130,19 @@ export const SECTIONS: ChecklistSection[] = [
       {
         id: 'calfresh-medi-cal',
         title: 'Check eligibility for CalFresh and Medi-Cal',
-        body: `<p>A drop in income can make you eligible for food and health programs, even if you've never used them before.</p><ul><li><strong>CalFresh</strong> helps pay for groceries. Benefits are loaded onto an EBT card. If you have very little income or cash, you may qualify for faster processing.</li><li><strong>Medi-Cal</strong> covers health care based on your current income.</li><li>You can apply for both online. It's fine to apply and let the county decide.</li></ul>`,
+        body: `<p>A drop in income may make you eligible for food and health assistance, even if you haven't used these programs before.</p><ul><li><strong>CalFresh:</strong> helps eligible households pay for groceries through an EBT card. If you have very limited income and resources, you may qualify for expedited benefits within three calendar days.</li><li><strong>Medi-Cal:</strong> provides free or low-cost health coverage for eligible Californians. Eligibility depends on factors including income, household size, and other applicable circumstances.</li><li><strong>Apply online:</strong> you can apply for both programs through BenefitsCal. Applying doesn't guarantee eligibility; your county will review your application.</li></ul>`,
         sources: [
           {
             label: 'BenefitsCal',
             url: 'https://benefitscal.com/',
+          },
+          {
+            label: 'California Department of Social Services — CalFresh',
+            url: 'https://www.cdss.ca.gov/calfresh',
+          },
+          {
+            label: 'California DHCS — Medi-Cal Eligibility',
+            url: 'https://www.dhcs.ca.gov/medi-cal-eligibility/',
           },
         ],
       },

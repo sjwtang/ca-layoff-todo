@@ -5,7 +5,8 @@ export function Hero() {
       aria-label="Welcome"
     >
       <p className="animate-fade-up m-0 max-w-md font-[family-name:var(--font-brand)] text-[1.75rem] leading-tight sm:text-[2.15rem]">
-        Sorry to hear you got laid off :( But hey, join the club..
+        I just got laid off, now what? Here&apos;s a few steps to get
+        started. Take a deep breath.. it&apos;ll be okay
       </p>
 
       <div
