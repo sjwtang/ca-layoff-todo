@@ -74,8 +74,16 @@ export const SECTIONS: ChecklistSection[] = [
         body: `<p>Apply for unemployment as soon as you become unemployed or your work hours are significantly reduced. Your claim generally starts on the Sunday of the week you file, so waiting may affect the weeks you can claim. You don't need to wait for severance or separation paperwork to apply.</p><ul><li><strong>Apply online:</strong> use <a href="https://edd.ca.gov/en/unemployment/" target="_blank" rel="noopener noreferrer">EDD's UI Online</a>.</li><li><strong>Gather your information:</strong> have your Social Security number, employer details, employment dates, and recent work and wage history ready.</li><li><strong>Certify for benefits:</strong> follow EDD's instructions and certify as directed, usually every two weeks, to continue receiving benefits.</li><li><strong>On WARN notice?</strong> Don't assume you must wait until the notice period ends. If you've stopped working or your hours have been reduced, check with EDD about your eligibility. If you're still working and receiving regular wages, you may not yet qualify. Answer EDD's questions about severance, WARN-related payments, or pay in lieu of notice accurately.</li></ul>`,
         sources: [
           {
-            label: 'California EDD — Unemployment Benefits',
+            label: 'EDD — Apply for Unemployment',
             url: 'https://edd.ca.gov/en/unemployment/',
+          },
+          {
+            label: 'EDD — Certification and Benefits',
+            url: 'https://edd.ca.gov/en/unemployment/step-5-certify-for-benefits/',
+          },
+          {
+            label: 'EDD — WARN Pay and Unemployment Eligibility',
+            url: 'https://edd.ca.gov/en/uibdg/total_and_partial_unemployment_tpu_46037/',
           },
         ],
       },
