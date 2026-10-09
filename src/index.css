@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #faf6ef;
+  --ink: #1a1a1a;
+  --muted: #5c5c5c;
+  --line: #d4cfc4;
+  --accent: #2f4a3a;
+  --panel: #f3eee4;
+  --font-hand: "Patrick Hand", "Segoe Print", cursive;
+  --font-brand: "Caveat", "Patrick Hand", cursive;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 120% 80% at 10% -20%, rgba(210, 190, 160, 0.18), transparent 55%),
+    radial-gradient(ellipse 90% 60% at 100% 0%, rgba(190, 200, 170, 0.12), transparent 50%),
+    linear-gradient(180deg, #fbf8f2 0%, var(--bg) 40%, #f5f0e6 100%);
+  color: var(--ink);
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(47, 74, 58, 0.18);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-up-delay {
+  animation: fade-up 0.75s ease-out 0.12s both;
+}
+
+.animate-fade-up-late {
+  animation: fade-up 0.8s ease-out 0.22s both;
+}
+
+.detail-body p {
+  margin: 0 0 0.75rem;
+}
+
+.detail-body ul {
+  margin: 0 0 0.9rem;
+  padding-left: 1.2rem;
+}
+
+.detail-body li {
+  margin-bottom: 0.4rem;
+}
+
+.detail-body .src {
+  margin-top: 0.25rem;
+}
+
+.detail-body .src a {
+  color: var(--accent);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.detail-body .src a:focus-visible,
+button:focus-visible,
+a:focus-visible,
+input:focus-visible + span {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
