@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { SECTIONS, TOTAL_ITEMS } from '../data/checklist'
+import { SECTIONS } from '../data/checklist'
 import { useCheckedItems } from '../hooks/useCheckedItems'
 import { ChecklistItem } from './ChecklistItem'
 
@@ -33,25 +33,18 @@ export function Checklist() {
     })
   }
 
-  const doneCount = Object.keys(checked).filter((k) => checked[k]).length
-
   return (
     <section
       id="todo"
       className="animate-fade-up-late mx-auto w-full max-w-3xl px-5 pt-28 sm:pt-36"
       aria-labelledby="todo-heading"
     >
-      <div className="mb-10 flex items-baseline justify-between gap-4">
-        <h2
-          id="todo-heading"
-          className="m-0 font-[family-name:var(--font-brand)] text-[2.4rem] leading-none sm:text-[2.85rem]"
-        >
-          To-do list
-        </h2>
-        <p className="m-0 text-[1.05rem] text-[var(--muted)]" aria-live="polite">
-          {doneCount} of {TOTAL_ITEMS} done
-        </p>
-      </div>
+      <h2
+        id="todo-heading"
+        className="mb-10 m-0 font-[family-name:var(--font-brand)] text-[2.4rem] leading-none sm:text-[2.85rem]"
+      >
+        To-do list
+      </h2>
 
       <div className="flex flex-col gap-12">
         {SECTIONS.map((section) => {
