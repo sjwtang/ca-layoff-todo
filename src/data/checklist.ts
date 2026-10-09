@@ -114,12 +114,16 @@ export const SECTIONS: ChecklistSection[] = [
       },
       {
         id: 'budget',
-        title: 'Pause non-essential savings and review your budget',
-        body: `<p>Your goal this week is to know roughly how long your money will last.</p><ul><li>List your must-pay bills: rent or mortgage, utilities, insurance, food, debt minimums.</li><li>Add up what you have: savings, severance, and expected unemployment payments.</li><li>Pause optional spending and extra savings contributions for now.</li><li>If a bill looks hard to pay, call your landlord or lender early. Many offer hardship options, and it's easier to ask before you miss a payment.</li></ul>`,
+        title: 'Review your budget and pause non-essential spending',
+        body: `<p>Your goal this week is to understand how long your money can cover essential expenses.</p><ul><li><strong>Add up essential expenses:</strong> Include rent or mortgage, utilities, insurance, groceries, transportation, and minimum debt payments.</li><li><strong>Estimate available funds:</strong> Include savings and any confirmed severance or unemployment benefits. Treat pending payments as estimates, not guaranteed income.</li><li><strong>Pause non-essential spending:</strong> Consider temporarily reducing subscriptions, discretionary purchases, and extra savings or investment contributions while you assess your finances.</li><li><strong>Contact creditors early:</strong> If you may miss a payment, contact your landlord, lender, or utility provider to ask about payment plans, hardship programs, or extensions. Options vary by provider.</li></ul>`,
         sources: [
           {
-            label: 'California Department of Financial Protection and Innovation',
-            url: 'https://dfpi.ca.gov/',
+            label: 'California DFPI — Consumer Help and Financial Resources',
+            url: 'https://dfpi.ca.gov/consumers/how-to-get-help/',
+          },
+          {
+            label: 'California EDD — Unemployment Benefits',
+            url: 'https://edd.ca.gov/en/unemployment/',
           },
         ],
       },
