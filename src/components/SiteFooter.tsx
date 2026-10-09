@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export function SiteFooter() {
   return (
     <footer className="mx-auto mt-28 w-full max-w-3xl border-t border-[var(--line)] px-5 py-6 sm:mt-36">
@@ -13,10 +15,21 @@ export function SiteFooter() {
             Shirley
           </a>
         </p>
-        <p className="m-0 max-w-md text-left text-[0.95rem] leading-snug text-[var(--muted)] sm:text-right">
-          This website has been created for informational purposes only and is
-          not offered, nor should be construed, as legal advice.
-        </p>
+        <div className="max-w-md text-left sm:text-right">
+          <p className="m-0 text-[0.95rem] leading-snug text-[var(--muted)]">
+            This website has been created for informational purposes only and is
+            not offered, nor should be construed, as legal advice.
+          </p>
+          <p className="mt-3 mb-0 text-[1.05rem] leading-snug text-[var(--ink)]">
+            Have a suggestion on how to improve this site?{' '}
+            <Link
+              to="/contact"
+              className="underline underline-offset-3 transition-opacity hover:opacity-70"
+            >
+              Send it here
+            </Link>
+          </p>
+        </div>
       </div>
     </footer>
   )

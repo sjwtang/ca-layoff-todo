@@ -18,6 +18,20 @@ npm run build
 npm run preview
 ```
 
+## Contact form (email delivery)
+
+Suggestions from the footer form are emailed via [Formspree](https://formspree.io):
+
+1. Create a free Formspree form and set the notification email to yours.
+2. Copy the form endpoint (looks like `https://formspree.io/f/xxxxxxxx`).
+3. Create a `.env` file in the project root:
+
+```bash
+cp .env.example .env
+```
+
+4. Set `VITE_FORMSPREE_ENDPOINT` to that URL, then restart the dev server.
+
 ## Notes
 
 - Checkmarks are stored in the browser (`localStorage`) only — nothing is sent to a server.
