@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export function SiteFooter() {
   return (
-    <footer className="mx-auto mt-28 w-full max-w-3xl border-t border-[var(--line)] px-5 py-6 sm:mt-36">
+    <footer className="mx-auto mt-36 w-full max-w-3xl border-t border-[var(--line)] px-5 py-6 sm:mt-44">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
         <p className="m-0 shrink-0 text-[1.1rem]">
           Made by{' '}
