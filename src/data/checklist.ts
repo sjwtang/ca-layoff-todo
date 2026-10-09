@@ -8,7 +8,6 @@ export type ChecklistItem = {
 export type ChecklistSection = {
   id: string
   title: string
-  note: string
   items: ChecklistItem[]
 }
 
@@ -16,7 +15,6 @@ export const SECTIONS: ChecklistSection[] = [
   {
     id: 'today',
     title: 'Do today',
-    note: "These are easiest to handle while you're still in touch with your employer, or they cost you more the longer you wait.",
     items: [
       {
         id: 'separation-notice',
@@ -60,7 +58,6 @@ export const SECTIONS: ChecklistSection[] = [
   {
     id: 'week',
     title: 'This week',
-    note: "Not instant deadlines, but the sooner you sort these out, the fewer gaps you'll have.",
     items: [
       {
         id: 'health-insurance',
@@ -94,7 +91,6 @@ export const SECTIONS: ChecklistSection[] = [
   {
     id: 'month',
     title: 'This month',
-    note: 'Worth doing soon, but take your time. Rushed choices here can be expensive.',
     items: [
       {
         id: 'notice-requirements',
