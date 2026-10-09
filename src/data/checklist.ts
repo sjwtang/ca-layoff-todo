@@ -18,11 +18,11 @@ export const SECTIONS: ChecklistSection[] = [
     items: [
       {
         id: 'separation-notice',
-        title: 'Request a written separation notice',
-        body: `<p>Ask HR to put your layoff in writing, including your last day and the reason. You'll use it for unemployment, health coverage, and other benefits.</p><ul><li>California employers are generally required to give laid-off workers information on how to apply for unemployment (the "For Your Benefit" pamphlet, form DE 2320).</li><li>Ask for the document by email so you have a record.</li><li>You can also request copies of your personnel and payroll records.</li></ul>`,
+        title: 'Save your layoff letter or email',
+        body: `<p>Your employer must generally provide immediate written notice when you're laid off or discharged, along with information about California's unemployment and other benefit programs.</p><ul><li>Save your layoff letter or HR email, including any details about your last day and reason for separation.</li><li>Check that you received the required Notice to Employee as to Change in Relationship and the EDD's For Your Benefit pamphlet (DE 2320). If you're unsure, ask HR.</li><li>Keep copies of your separation documents for your records. You can also request copies of your personnel and payroll records.</li></ul>`,
         src: {
-          label: 'EDD: information for workers',
-          url: 'https://edd.ca.gov/en/unemployment/',
+          label: 'California EDD — Required Notices and Pamphlets',
+          url: 'https://edd.ca.gov/en/payroll_taxes/step-7-provide-required-notices/',
         },
       },
       {
