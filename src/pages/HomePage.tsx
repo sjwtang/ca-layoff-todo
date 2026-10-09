@@ -8,7 +8,7 @@ export function HomePage() {
       <Checklist />
       <p className="mx-auto mt-20 max-w-md px-5 text-center font-[family-name:var(--font-brand)] text-[1.75rem] leading-tight sm:mt-24 sm:text-[2.15rem]">
         .. and ease back into the job search when you&apos;re ready and it feels
-        right. Take a deep breath, it&apos;ll be okay.
+        right.
       </p>
     </>
   )
