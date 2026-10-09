@@ -55,7 +55,7 @@ export const SECTIONS: ChecklistSection[] = [
       {
         id: 'severance',
         title:
-          'Review your severance offer, if you have one (before signing anything)',
+          'Review your severance offer, if you have one',
         body: `<p>California generally does not require employers to offer severance unless a contract or company policy provides for it. If you receive an offer, read it carefully before signing; you can ask for time to review it.</p><ul><li><strong>Understand what you're giving up:</strong> severance agreements often require you to release certain legal claims.</li><li><strong>Check your deadline:</strong> if you're 40 or older, a waiver of federal age-discrimination claims generally requires at least 21 days to consider the agreement—or 45 days for certain group termination programs—and 7 days after signing to revoke it. These rules don't apply to every severance agreement.</li><li><strong>Ask whether the terms are negotiable:</strong> you can request changes to severance pay, health coverage, references, or your separation date.</li><li><strong>Consider legal review:</strong> if you're unsure about the terms or the rights you're giving up, consider consulting an employment attorney before signing.</li></ul>`,
         sources: [
           {
