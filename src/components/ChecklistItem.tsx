@@ -8,6 +8,17 @@ type Props = {
   onToggleOpen: (id: string) => void
 }
 
+function sourcesHtml(item: Item) {
+  const links = item.sources
+    .map(
+      (s) =>
+        `<a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.label}</a>`,
+    )
+    .join(' · ')
+  const label = item.sources.length > 1 ? 'Official sources' : 'Official source'
+  return `<p class="src">${label}: ${links}</p>`
+}
+
 export function ChecklistItem({
   item,
   done,
@@ -99,9 +110,7 @@ export function ChecklistItem({
           <div
             className="detail-body pb-4 pl-10 pr-1 text-[1.1rem] leading-relaxed text-[var(--muted)] sm:pl-11"
             dangerouslySetInnerHTML={{
-              __html:
-                item.body +
-                `<p class="src">Official source: <a href="${item.src.url}" target="_blank" rel="noopener noreferrer">${item.src.label}</a></p>`,
+              __html: item.body + sourcesHtml(item),
             }}
           />
         </div>
