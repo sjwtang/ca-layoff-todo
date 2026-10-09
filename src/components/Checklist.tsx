@@ -4,7 +4,7 @@ import { useCheckedItems } from '../hooks/useCheckedItems'
 import { ChecklistItem } from './ChecklistItem'
 
 export function Checklist() {
-  const { checked, toggle, clearAll } = useCheckedItems()
+  const { checked, toggle } = useCheckedItems()
   const [openId, setOpenId] = useState<string | null>(null)
 
   useEffect(() => {
@@ -70,16 +70,6 @@ export function Checklist() {
           </div>
         ))}
       </div>
-
-      <p className="mt-8 mb-0">
-        <button
-          type="button"
-          onClick={clearAll}
-          className="cursor-pointer border-0 bg-transparent p-0 font-[inherit] text-[1.1rem] text-[var(--accent)] underline underline-offset-3"
-        >
-          Clear all checkmarks
-        </button>
-      </p>
     </section>
   )
 }
