@@ -16,11 +16,7 @@ export function SiteFooter() {
           </a>
         </p>
         <div className="max-w-md text-left sm:text-right">
-          <p className="m-0 text-[0.95rem] leading-snug text-[var(--muted)]">
-            This website has been created for informational purposes only and is
-            not offered, nor should be construed, as legal advice.
-          </p>
-          <p className="mt-3 mb-0 text-[1.05rem] leading-snug text-[var(--ink)]">
+          <p className="m-0 text-[1.05rem] leading-snug text-[var(--ink)]">
             Have a suggestion on how to improve this site?{' '}
             <Link
               to="/contact"
@@ -28,6 +24,10 @@ export function SiteFooter() {
             >
               Send it here
             </Link>
+          </p>
+          <p className="mt-3 mb-0 text-[0.95rem] leading-snug text-[var(--muted)]">
+            This website has been created for informational purposes only and is
+            not offered, nor should be construed, as legal advice.
           </p>
         </div>
       </div>
