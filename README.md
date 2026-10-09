@@ -22,7 +22,7 @@ npm run preview
 
 - Checkmarks are stored in the browser (`localStorage`) only — nothing is sent to a server.
 - The dog doodle and a custom handwritten font can be dropped in later; the site currently uses Caveat + Patrick Hand from Google Fonts.
-- **Inspo** (nav) is a work-in-progress wall where visitors can leave a local message.
-- **Contact** lives in the footer and opens a feedback form for improving the site.
+
+
 
 This site is general information, not legal advice.
