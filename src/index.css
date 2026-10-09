@@ -101,7 +101,7 @@ a {
   margin-top: 0.25rem;
 }
 
-.detail-body .src a {
+.detail-body a {
   color: var(--accent);
   font-weight: 600;
   text-underline-offset: 3px;
