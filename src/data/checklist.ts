@@ -75,7 +75,7 @@ export const SECTIONS: ChecklistSection[] = [
         sources: [
           {
             label: 'EDD — Apply for Unemployment',
-            url: 'https://edd.ca.gov/en/unemployment/',
+            url: 'https://edd.ca.gov/en/unemployment/step-2-apply/',
           },
           {
             label: 'EDD — Certification and Benefits',
