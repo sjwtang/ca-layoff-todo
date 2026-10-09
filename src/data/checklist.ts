@@ -50,9 +50,18 @@ export const SECTIONS: ChecklistSection[] = [
       {
         id: 'severance',
         title:
-          'Review your severance offer, if applicable (before signing anything)',
-        body: `<p>California doesn't require employers to offer severance unless a contract or company policy does. If you're offered some, you generally don't have to sign on the spot.</p><ul><li>Read what you'd be giving up. Severance agreements often include a release of legal claims.</li><li>Note the deadline. If you're 40 or older, you generally get at least 21 days to consider it (45 for group layoffs) and 7 days to change your mind after signing.</li><li>It's often worth asking for more: extra pay, continued health coverage, a neutral reference, or a later end date.</li><li>Consider having an employment attorney review it. Many offer a free first consultation.</li></ul>`,
+          'Review your severance offer, if you have one (before signing anything)',
+        body: `<p>California generally does not require employers to offer severance unless a contract or company policy provides for it. If you receive an offer, read it carefully before signing; you can ask for time to review it.</p><ul><li><strong>Understand what you're giving up:</strong> severance agreements often require you to release certain legal claims.</li><li><strong>Check your deadline:</strong> if you're 40 or older, a waiver of federal age-discrimination claims generally requires at least 21 days to consider the agreement—or 45 days for certain group termination programs—and 7 days after signing to revoke it. These rules don't apply to every severance agreement.</li><li><strong>Ask whether the terms are negotiable:</strong> you can request changes to severance pay, health coverage, references, or your separation date.</li><li><strong>Consider legal review:</strong> If you're unsure about the terms or the rights you're giving up, consider consulting an employment attorney before signing.</li></ul>`,
         sources: [
+          {
+            label:
+              "California Labor Commissioner's Office — Final Pay and Severance Pay",
+            url: 'https://www.dir.ca.gov/dlse/faq_waitingtimepenalty.htm',
+          },
+          {
+            label: 'U.S. EEOC — Severance Agreements and Waivers of Claims',
+            url: 'https://www.eeoc.gov/laws/guidance/qa-understanding-waivers-discrimination-claims-employee-severance-agreements',
+          },
           {
             label: 'California Civil Rights Department',
             url: 'https://calcivilrights.ca.gov/',
