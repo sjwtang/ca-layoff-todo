@@ -36,7 +36,7 @@ export function Checklist() {
   return (
     <section
       id="todo"
-      className="animate-fade-up-late mx-auto w-full max-w-3xl px-5 pt-28 sm:pt-36"
+      className="animate-fade-up-late mx-auto w-full max-w-3xl px-5 pt-40 sm:pt-52"
       aria-labelledby="todo-heading"
     >
       <h2
