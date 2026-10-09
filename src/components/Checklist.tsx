@@ -47,36 +47,28 @@ export function Checklist() {
       </h2>
 
       <div className="flex flex-col gap-12">
-        {SECTIONS.map((section) => {
-          const sectionDone = section.items.filter((it) => checked[it.id]).length
-          return (
-            <div key={section.id} aria-labelledby={`h-${section.id}`}>
-              <div className="mb-4 flex items-baseline justify-between gap-3">
-                <h3
-                  id={`h-${section.id}`}
-                  className="m-0 font-[family-name:var(--font-brand)] text-[1.85rem] leading-none sm:text-[2.05rem]"
-                >
-                  {section.title}
-                </h3>
-                <span className="text-[1rem] text-[var(--muted)]">
-                  {sectionDone} of {section.items.length}
-                </span>
-              </div>
-              <ul className="m-0 list-none p-0">
-                {section.items.map((item) => (
-                  <ChecklistItem
-                    key={item.id}
-                    item={item}
-                    done={!!checked[item.id]}
-                    open={openId === item.id}
-                    onToggleDone={toggle}
-                    onToggleOpen={handleToggleOpen}
-                  />
-                ))}
-              </ul>
-            </div>
-          )
-        })}
+        {SECTIONS.map((section) => (
+          <div key={section.id} aria-labelledby={`h-${section.id}`}>
+            <h3
+              id={`h-${section.id}`}
+              className="mb-4 m-0 font-[family-name:var(--font-brand)] text-[1.85rem] leading-none sm:text-[2.05rem]"
+            >
+              {section.title}
+            </h3>
+            <ul className="m-0 list-none p-0">
+              {section.items.map((item) => (
+                <ChecklistItem
+                  key={item.id}
+                  item={item}
+                  done={!!checked[item.id]}
+                  open={openId === item.id}
+                  onToggleDone={toggle}
+                  onToggleOpen={handleToggleOpen}
+                />
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
 
       <p className="mt-8 mb-0">
