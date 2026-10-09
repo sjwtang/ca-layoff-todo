@@ -71,8 +71,7 @@ export function ContactPage() {
         Send a suggestion
       </h1>
       <p className="mt-4 max-w-lg text-[1.2rem] text-[var(--muted)]">
-        Have an idea for how to improve this site? Share it below — it goes
-        straight to Shirley&apos;s inbox.
+        Have an idea for how to improve this site? Share it below.
       </p>
 
       {status === 'sent' ? (
