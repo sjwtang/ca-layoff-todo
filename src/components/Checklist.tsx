@@ -38,7 +38,7 @@ export function Checklist() {
   return (
     <section
       id="todo"
-      className="animate-fade-up-late mx-auto w-full max-w-3xl px-5 pt-16 sm:pt-20"
+      className="animate-fade-up-late mx-auto w-full max-w-3xl px-5 pt-28 sm:pt-36"
       aria-labelledby="todo-heading"
     >
       <div className="mb-8 flex items-baseline justify-between gap-4">
