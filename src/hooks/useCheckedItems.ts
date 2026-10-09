@@ -13,18 +13,21 @@ function loadChecked(): Record<string, boolean> {
 
 export function useCheckedItems() {
   const [checked, setChecked] = useState<Record<string, boolean>>({})
+  const [ready, setReady] = useState(false)
 
   useEffect(() => {
     setChecked(loadChecked())
+    setReady(true)
   }, [])
 
   useEffect(() => {
+    if (!ready) return
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(checked))
     } catch {
       // Ignore quota / private mode failures.
     }
-  }, [checked])
+  }, [checked, ready])
 
   function toggle(id: string, value: boolean) {
     setChecked((prev) => {
