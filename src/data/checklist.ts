@@ -114,6 +114,4 @@ export const SECTIONS: ChecklistSection[] = [
   },
 ]
 
-export const TOTAL_ITEMS = SECTIONS.reduce((n, s) => n + s.items.length, 0)
-
 export const STORAGE_KEY = 'laid-off-ca:checked:v1'
