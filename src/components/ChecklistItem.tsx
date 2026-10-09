@@ -9,6 +9,7 @@ type Props = {
 }
 
 function sourcesHtml(item: Item) {
+  if (item.sources.length === 0) return ''
   const links = item.sources
     .map(
       (s) =>
