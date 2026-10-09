@@ -166,7 +166,7 @@ export const SECTIONS: ChecklistSection[] = [
       {
         id: 'job-search',
         title: 'Ease back into the job search when ready',
-        body: `<p>There's no single right timeline. Once the urgent logistics are underway, you can start gently—when you have the bandwidth.</p><ul><li><strong>Give yourself a little room:</strong> take a few days (or longer) before jumping into applications if you need it.</li><li><strong>Update the basics:</strong> refresh your resume, LinkedIn, and a short list of roles or companies that interest you.</li><li><strong>Reach out when it feels right:</strong> reconnect with a few trusted contacts; you don't have to announce a full search to everyone at once.</li></ul>`,
+        body: `<p>There's no single right timeline. Once the urgent logistics are underway, you can start gently.</p><ul><li><strong>Give yourself a little room:</strong> take a few days (or longer) before jumping into applications if you need it.</li><li><strong>Update the basics:</strong> refresh your resume, LinkedIn, and a short list of roles or companies that interest you.</li><li><strong>Reach out when it feels right:</strong> reconnect with a few trusted contacts; you don't have to announce a full search to everyone at once.</li></ul>`,
         sources: [],
       },
     ],
