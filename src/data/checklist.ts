@@ -87,6 +87,18 @@ export const SECTIONS: ChecklistSection[] = [
           },
         ],
       },
+      {
+        id: 'immigration',
+        title: 'Check your immigration options, if applicable',
+        body: `<p>If your work authorization or immigration status depends on your job, act promptly after a layoff. Your options and deadlines depend on your specific status.</p><ul><li><strong>Check your deadline:</strong> certain visa holders, including H-1B workers, may qualify for a discretionary grace period of up to 60 days after employment ends, or until their authorized validity period expires, whichever comes first.</li><li><strong>Explore your options:</strong> you may be able to find a new sponsoring employer, change immigration status, or pursue another eligible pathway.</li><li><strong>Get qualified guidance:</strong> contact your immigration attorney or your employer's immigration counsel as soon as possible. Don't assume the same rules apply to every visa type.</li></ul>`,
+        sources: [
+          {
+            label:
+              'USCIS — Options for Nonimmigrant Workers Following Termination of Employment',
+            url: 'https://www.uscis.gov/working-in-the-united-states/information-for-employers-and-employees/options-for-nonimmigrant-workers-following-termination-of-employment',
+          },
+        ],
+      },
     ],
   },
   {
