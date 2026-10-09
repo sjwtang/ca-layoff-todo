@@ -35,6 +35,6 @@ cp .env.example .env
 ## Notes
 
 - Checkmarks are stored in the browser (`localStorage`) only — nothing is sent to a server.
-- The dog doodle and a custom handwritten font can be dropped in later; the site currently uses Caveat + Patrick Hand from Google Fonts.
+- The dog doodle can be dropped in later; the site uses Inter Display.
 
 This site is general information, not legal advice.

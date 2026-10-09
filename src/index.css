@@ -7,8 +7,9 @@
   --line: #d4cfc4;
   --accent: #2f4a3a;
   --panel: #f3eee4;
-  --font-hand: "Patrick Hand", "Segoe Print", cursive;
-  --font-brand: "Caveat", "Patrick Hand", cursive;
+  --font-sans: "InterDisplay", "Inter Display", Inter, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-brand: var(--font-sans);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -35,9 +36,11 @@ body {
     radial-gradient(ellipse 90% 60% at 100% 0%, rgba(190, 200, 170, 0.12), transparent 50%),
     linear-gradient(180deg, #fbf8f2 0%, var(--bg) 40%, #f5f0e6 100%);
   color: var(--ink);
-  font-family: var(--font-hand);
-  font-size: 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
   line-height: 1.55;
+  letter-spacing: -0.011em;
+  font-feature-settings: "liga" 1, "calt" 1;
   -webkit-font-smoothing: antialiased;
 }
 
