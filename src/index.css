@@ -80,6 +80,11 @@ a {
   margin: 0 0 0.75rem;
 }
 
+.detail-body strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+
 .detail-body ul {
   list-style-type: disc;
   list-style-position: outside;
