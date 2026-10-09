@@ -71,10 +71,10 @@ export const SECTIONS: ChecklistSection[] = [
       {
         id: 'unemployment',
         title: 'File for unemployment with the EDD',
-        body: `<p>File as soon as you're laid off. Your claim generally starts the week you file, so waiting can cost you benefits. You can file even if you're still waiting on severance or paperwork.</p><ul><li>Apply online through the EDD's UI Online.</li><li>Have your Social Security number, your employer's name and address, and your dates of employment ready.</li><li>After you file, you'll need to certify for benefits every two weeks to keep getting paid.</li></ul>`,
+        body: `<p>Apply for unemployment as soon as you become unemployed or your work hours are significantly reduced. Your claim generally starts on the Sunday of the week you file, so waiting may affect the weeks you can claim. You don't need to wait for severance or separation paperwork to apply.</p><ul><li><strong>Apply online:</strong> use <a href="https://edd.ca.gov/en/unemployment/" target="_blank" rel="noopener noreferrer">EDD's UI Online</a>.</li><li><strong>Gather your information:</strong> have your Social Security number, employer details, employment dates, and recent work and wage history ready.</li><li><strong>Certify for benefits:</strong> follow EDD's instructions and certify as directed, usually every two weeks, to continue receiving benefits.</li><li><strong>On WARN notice?</strong> Don't assume you must wait until the notice period ends. If you've stopped working or your hours have been reduced, check with EDD about your eligibility. If you're still working and receiving regular wages, you may not yet qualify. Answer EDD's questions about severance, WARN-related payments, or pay in lieu of notice accurately.</li></ul>`,
         sources: [
           {
-            label: 'EDD: file for unemployment',
+            label: 'California EDD — Unemployment Benefits',
             url: 'https://edd.ca.gov/en/unemployment/',
           },
         ],
