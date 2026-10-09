@@ -23,12 +23,17 @@ export const SECTIONS: ChecklistSection[] = [
     items: [
       {
         id: 'separation-notice',
-        title: 'Save your separation documents',
-        body: `<p>Keep a record of your layoff and confirm you received the required California notices.</p><ul><li><strong>Save your layoff letter or HR email:</strong> keep details about your last day and reason for separation.</li><li><strong>Check for required EDD notices:</strong> look for the Notice to Employee as to Change in Relationship and For Your Benefit (DE 2320) pamphlet. Missing either? Ask HR for a copy.</li><li><strong>Keep copies for your records:</strong> you can also request copies of your personnel and payroll records.</li></ul>`,
+        title: 'Save your separation documents and work records',
+        body: `<p>Keep copies of important employment documents for your records, ideally before you lose access to company systems.</p><ul><li><strong>Save your layoff letter or HR email:</strong> keep details about your separation date and reason for separation.</li><li><strong>Check for required EDD notices:</strong> look for the Notice to Employee as to Change in Relationship and For Your Benefit (DE 2320) pamphlet. Missing either? Ask HR for a copy.</li><li><strong>Download your employment records:</strong> save pay stubs, performance reviews, benefits information, and your offer letter. You can also request copies of your personnel and payroll records.</li><li><strong>Keep everything somewhere accessible:</strong> store copies securely in a personal account, and only retain company information you're authorized to keep.</li></ul>`,
         sources: [
           {
             label: 'California EDD — Required Notices and Pamphlets',
             url: 'https://edd.ca.gov/en/payroll_taxes/step-7-provide-required-notices/',
+          },
+          {
+            label:
+              "California Labor Commissioner's Office — Personnel Files",
+            url: 'https://www.dir.ca.gov/dlse/faq_righttoinspectpersonnelfiles.htm',
           },
         ],
       },
