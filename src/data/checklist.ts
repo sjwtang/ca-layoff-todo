@@ -153,26 +153,21 @@ export const SECTIONS: ChecklistSection[] = [
     title: 'This month',
     items: [
       {
-        id: 'notice-requirements',
-        title: 'Understand notice requirements',
-        body: `<p>Some employers must give 60 days' advance notice of a mass layoff or closure. If yours didn't, you may be owed back pay and benefits.</p><ul><li>Federal WARN generally applies to employers with 100 or more employees.</li><li>Cal-WARN generally applies to employers with 75 or more employees, and in some cases is broader than the federal law.</li><li>Not every layoff is covered. It depends on company size, how many people were let go, and whether it's a closure or relocation.</li><li>If you think notice was owed, talk to an employment attorney or the Labor Commissioner.</li></ul>`,
+        id: '401k',
+        title: 'Review your 401(k) options',
+        body: `<p>You generally have time to decide what to do with your retirement savings after leaving a job. Check your plan's rules before making changes.</p><ul><li><strong>Leave it in your former employer's plan:</strong> this may be an option depending on your account balance and plan rules. Smaller balances may be moved or distributed under certain circumstances.</li><li><strong>Roll it over:</strong> you may be able to transfer your savings to an IRA or a new employer's eligible retirement plan. A direct rollover generally avoids mandatory federal income-tax withholding on the transfer.</li><li><strong>Avoid cashing out without understanding the costs:</strong> withdrawals may be subject to income tax and, if you're under 59½, an additional 10% federal tax unless an exception applies.</li></ul><p>Compare fees, investment options, and tax consequences before deciding. You can contact your plan administrator to understand your options.</p>`,
         sources: [
           {
-            label: 'EDD: Layoff services and WARN',
-            url: 'https://edd.ca.gov/en/jobs_and_training/Layoff_Services_WARN',
+            label: 'IRS — Retirement Plan Options After Leaving a Job',
+            url: 'https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-termination-of-employment',
           },
         ],
       },
       {
-        id: '401k',
-        title: 'Decide what to do with your 401(k), if applicable',
-        body: `<p>You usually have three choices, and there's rarely a same-day deadline.</p><ul><li><strong>Leave it</strong> in your old employer's plan, if the plan allows it. Small balances (generally under $7,000) may be moved out for you.</li><li><strong>Roll it over</strong> into an IRA or a new employer's plan. A direct rollover, where the money moves between institutions, avoids tax withholding.</li><li><strong>Cash it out.</strong> This is usually the costliest option: it's taxed as income, plus a 10% penalty if you're under 59½ (some exceptions apply).</li></ul><p>Compare fees and investment options before choosing.</p>`,
-        sources: [
-          {
-            label: 'IRS: rollovers of retirement plans',
-            url: 'https://www.irs.gov/retirement-plans',
-          },
-        ],
+        id: 'job-search',
+        title: 'Ease back into the job search when ready',
+        body: `<p>There's no single right timeline. Once the urgent logistics are underway, you can start gently—when you have the bandwidth.</p><ul><li><strong>Give yourself a little room:</strong> take a few days (or longer) before jumping into applications if you need it.</li><li><strong>Update the basics:</strong> refresh your resume, LinkedIn, and a short list of roles or companies that interest you.</li><li><strong>Reach out when it feels right:</strong> reconnect with a few trusted contacts; you don't have to announce a full search to everyone at once.</li></ul>`,
+        sources: [],
       },
     ],
   },
