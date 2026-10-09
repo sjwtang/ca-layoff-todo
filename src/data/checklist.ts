@@ -95,12 +95,20 @@ export const SECTIONS: ChecklistSection[] = [
     items: [
       {
         id: 'health-insurance',
-        title: 'Sort out health insurance',
-        body: `<p>Find out exactly when your employer coverage ends, then compare your options so you don't have a gap.</p><ul><li><strong>COBRA</strong> keeps your current plan, but you pay the full premium. You generally have 60 days to elect it, and coverage can be backdated.</li><li><strong>Covered California</strong> offers plans, often with financial help. Losing job-based coverage opens a special enrollment window of about 60 days.</li><li><strong>Medi-Cal</strong> is free or low-cost coverage based on income, and you can apply at any time.</li></ul>`,
+        title: 'Secure your health insurance and use your benefits',
+        body: `<p>Find out exactly when your employer-sponsored coverage ends, then compare options to avoid a coverage gap.</p><ul><li><strong>Use your current benefits:</strong> Schedule any needed medical, dental, vision, or specialist appointments before your coverage ends. Refill eligible prescriptions and ask your providers about upcoming treatments.</li><li><strong>Compare COBRA:</strong> You may be able to keep your current plan, but you'll generally pay the full premium. You usually have at least 60 days to elect it, measured from the later of the coverage-loss date or the date you're provided the election notice. Coverage can be retroactive if you elect and pay within the required deadlines.</li><li><strong>Explore Covered California:</strong> Losing job-based coverage generally gives you a special enrollment period of 60 days before or after your coverage ends. Financial assistance may be available.</li><li><strong>Check Medi-Cal eligibility:</strong> Medi-Cal provides free or low-cost coverage for eligible people based on factors including income and household circumstances. You can apply year-round.</li></ul>`,
         sources: [
           {
-            label: 'Covered California',
-            url: 'https://www.coveredca.com/',
+            label: 'California Department of Insurance — Losing Employer Coverage',
+            url: 'https://www.insurance.ca.gov/01-consumers/110-health/40-lost/',
+          },
+          {
+            label: 'Covered California — Special Enrollment',
+            url: 'https://www.coveredca.com/support/before-you-buy/qualifying-life-events/',
+          },
+          {
+            label: 'CMS — COBRA Questions and Answers',
+            url: 'https://www.cms.gov/cciio/programs-and-initiatives/other-insurance-protections/cobra_qna',
           },
         ],
       },
