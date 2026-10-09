@@ -6,7 +6,7 @@ export function Hero() {
     >
       <div className="animate-fade-up m-0 max-w-md font-[family-name:var(--font-brand)] text-[1.75rem] leading-tight sm:text-[2.15rem]">
         <p className="m-0">I just got laid off, now what?</p>
-        <p className="m-0 mt-2">Here&apos;s a few steps to get started.</p>
+        <p className="m-0 mt-2">Here are a few steps to get started.</p>
       </div>
 
       <div
