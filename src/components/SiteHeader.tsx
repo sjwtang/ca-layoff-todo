@@ -16,14 +16,14 @@ export function SiteHeader() {
         i got laid off
       </NavLink>
       <nav aria-label="Primary" className="flex flex-wrap items-center justify-end gap-x-4 gap-y-1 sm:gap-x-6">
-        <a href="/#todo" className="text-[1.15rem] opacity-70 transition-opacity duration-200 hover:opacity-100 sm:text-[1.25rem]">
+        <a
+          href="/#todo"
+          className="text-[1.15rem] opacity-70 transition-opacity duration-200 hover:opacity-100 sm:text-[1.25rem]"
+        >
           To-do list
         </a>
         <NavLink to="/inspo" className={linkClass}>
           Inspo
-        </NavLink>
-        <NavLink to="/contact" className={linkClass}>
-          Contact
         </NavLink>
       </nav>
     </header>
