@@ -9,13 +9,13 @@ export function Hero() {
         <p className="m-0 mt-2">Here are a few steps to get started.</p>
       </div>
 
-      <div
-        className="animate-fade-up-delay mt-10 flex h-40 w-40 items-center justify-center rounded-full bg-[#e8e4da] text-center text-[1.05rem] leading-snug text-[var(--muted)] sm:h-48 sm:w-48"
-        role="img"
-        aria-label="Placeholder for a dog drawing holding a banner"
-      >
-        <span className="max-w-[7.5rem]">dog drawing holding banner</span>
-      </div>
+      <img
+        src="/dogs.png"
+        alt="Three illustrated dogs standing side by side"
+        width={849}
+        height={388}
+        className="animate-fade-up-delay mt-10 w-full max-w-md object-contain sm:max-w-lg"
+      />
     </section>
   )
 }
