@@ -1,21 +1,41 @@
 import { useEffect, useId, useRef, useState } from 'react'
 
+type DogBubble = 'orange' | 'yellow'
+
+const BUBBLES: Record<
+  DogBubble,
+  { label: string; text: string; left: string; hitLeft: string }
+> = {
+  orange: {
+    label: 'Orange dog',
+    text: 'the job market is whack',
+    left: '17%',
+    hitLeft: '0%',
+  },
+  yellow: {
+    label: 'Yellow dog',
+    text: 'Take a deep breath..',
+    left: '50%',
+    hitLeft: '33%',
+  },
+}
+
 export function Hero() {
-  const [bubbleOpen, setBubbleOpen] = useState(false)
+  const [activeDog, setActiveDog] = useState<DogBubble | null>(null)
   const wrapRef = useRef<HTMLDivElement>(null)
   const bubbleId = useId()
 
   useEffect(() => {
-    if (!bubbleOpen) return
+    if (!activeDog) return
 
     function handlePointerDown(event: PointerEvent) {
       if (!wrapRef.current?.contains(event.target as Node)) {
-        setBubbleOpen(false)
+        setActiveDog(null)
       }
     }
 
     function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === 'Escape') setBubbleOpen(false)
+      if (event.key === 'Escape') setActiveDog(null)
     }
 
     document.addEventListener('pointerdown', handlePointerDown)
@@ -24,7 +44,7 @@ export function Hero() {
       document.removeEventListener('pointerdown', handlePointerDown)
       document.removeEventListener('keydown', handleKeyDown)
     }
-  }, [bubbleOpen])
+  }, [activeDog])
 
   return (
     <section
@@ -40,13 +60,14 @@ export function Hero() {
           ref={wrapRef}
           className="animate-fade-up-delay relative w-full max-w-[9.5rem] sm:max-w-[11rem]"
         >
-          {bubbleOpen ? (
+          {activeDog ? (
             <div
               id={bubbleId}
               role="status"
-              className="speech-bubble absolute bottom-[calc(100%+0.35rem)] left-[17%] z-10"
+              className="speech-bubble absolute bottom-[calc(100%+0.35rem)] z-10"
+              style={{ left: BUBBLES[activeDog].left }}
             >
-              the job market is whack
+              {BUBBLES[activeDog].text}
             </div>
           ) : null}
 
@@ -59,14 +80,20 @@ export function Hero() {
             draggable={false}
           />
 
-          <button
-            type="button"
-            className="absolute top-[8%] left-0 h-[84%] w-[34%] cursor-pointer border-0 bg-transparent p-0"
-            aria-label="Orange dog"
-            aria-expanded={bubbleOpen}
-            aria-controls={bubbleOpen ? bubbleId : undefined}
-            onClick={() => setBubbleOpen((open) => !open)}
-          />
+          {(Object.keys(BUBBLES) as DogBubble[]).map((dog) => (
+            <button
+              key={dog}
+              type="button"
+              className="absolute top-[8%] h-[84%] w-[34%] cursor-pointer border-0 bg-transparent p-0"
+              style={{ left: BUBBLES[dog].hitLeft }}
+              aria-label={BUBBLES[dog].label}
+              aria-expanded={activeDog === dog}
+              aria-controls={activeDog === dog ? bubbleId : undefined}
+              onClick={() =>
+                setActiveDog((current) => (current === dog ? null : dog))
+              }
+            />
+          ))}
         </div>
       </div>
     </section>
