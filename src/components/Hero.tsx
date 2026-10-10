@@ -14,7 +14,7 @@ export function Hero() {
         alt="Three illustrated dogs standing side by side"
         width={849}
         height={388}
-        className="animate-fade-up-delay mt-10 w-full max-w-[14rem] object-contain sm:max-w-[18rem]"
+        className="animate-fade-up-delay mt-10 w-full max-w-[9.5rem] object-contain sm:max-w-[11rem]"
       />
     </section>
   )
