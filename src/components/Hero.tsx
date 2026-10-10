@@ -14,7 +14,7 @@ const BUBBLES: Record<
   },
   yellow: {
     label: 'Yellow dog',
-    text: 'Take a deep breath..',
+    text: 'take a deep breath..',
     left: '50%',
     hitLeft: '33%',
   },
