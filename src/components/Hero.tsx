@@ -8,7 +8,7 @@ const BUBBLES: Record<
 > = {
   orange: {
     label: 'Orange dog',
-    text: 'the job market is whack',
+    text: 'the job market is wack',
     left: '17%',
     hitLeft: '0%',
   },
