@@ -4,10 +4,9 @@ export function Hero() {
       className="mx-auto flex w-full max-w-3xl flex-col items-center px-5 pt-14 text-center sm:pt-20"
       aria-label="Welcome"
     >
-      <div className="animate-fade-up m-0 max-w-md font-[family-name:var(--font-brand)] text-[1.75rem] leading-tight sm:text-[2.15rem]">
-        <p className="m-0">I just got laid off, now what?</p>
-        <p className="m-0 mt-2">Here are a few steps to get started.</p>
-      </div>
+      <p className="animate-fade-up m-0 max-w-md font-[family-name:var(--font-brand)] text-[1.75rem] leading-tight sm:text-[2.15rem]">
+        I just got laid off, now what?
+      </p>
 
       <img
         src="/dogs.png"
