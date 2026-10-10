@@ -1,6 +1,6 @@
 import { useEffect, useId, useRef, useState } from 'react'
 
-type DogBubble = 'orange' | 'yellow'
+type DogBubble = 'orange' | 'yellow' | 'black'
 
 const BUBBLES: Record<
   DogBubble,
@@ -17,6 +17,12 @@ const BUBBLES: Record<
     text: 'Take a deep breath..',
     left: '50%',
     hitLeft: '33%',
+  },
+  black: {
+    label: 'Black dog',
+    text: "you'll be okay!",
+    left: '83%',
+    hitLeft: '66%',
   },
 }
 
