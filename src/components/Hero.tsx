@@ -44,7 +44,7 @@ export function Hero() {
             <div
               id={bubbleId}
               role="status"
-              className="speech-bubble absolute bottom-[92%] left-[8%] z-10 w-[9.5rem] -translate-x-1/2 sm:w-[11rem]"
+              className="speech-bubble absolute bottom-[78%] left-[17%] z-10"
             >
               the job market is whack
             </div>

@@ -82,7 +82,7 @@ a {
 @keyframes speech-pop {
   from {
     opacity: 0;
-    transform: translate(-50%, 8px) scale(0.92);
+    transform: translate(-50%, 6px) scale(0.92);
   }
   to {
     opacity: 1;
@@ -91,16 +91,19 @@ a {
 }
 
 .speech-bubble {
-  padding: 0.55rem 0.75rem;
+  width: max-content;
+  max-width: 5.75rem;
+  padding: 0.4rem 0.55rem;
   border: 1.75px solid var(--ink);
-  border-radius: 1rem;
+  border-radius: 0.85rem;
   background: #fffdf8;
   color: var(--ink);
-  font-size: 0.82rem;
-  line-height: 1.25;
+  font-size: 0.72rem;
+  line-height: 1.2;
   font-weight: 500;
   text-align: center;
   box-shadow: 0 2px 0 rgba(26, 26, 26, 0.06);
+  transform: translateX(-50%);
   animation: speech-pop 0.22s ease-out both;
 }
 
@@ -108,9 +111,9 @@ a {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -7px;
-  width: 12px;
-  height: 12px;
+  bottom: -6px;
+  width: 10px;
+  height: 10px;
   border-right: 1.75px solid var(--ink);
   border-bottom: 1.75px solid var(--ink);
   background: #fffdf8;
