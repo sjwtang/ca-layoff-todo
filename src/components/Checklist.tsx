@@ -41,10 +41,15 @@ export function Checklist() {
     >
       <h2
         id="todo-heading"
-        className="mb-10 m-0 font-[family-name:var(--font-brand)] text-[2.4rem] leading-none sm:text-[2.85rem]"
+        className="mb-3 m-0 font-[family-name:var(--font-brand)] text-[2.4rem] leading-none sm:text-[2.85rem]"
       >
         To-do list
       </h2>
+      <p className="mb-10 mt-0 max-w-2xl text-[1.05rem] leading-snug text-[var(--muted)] sm:text-[1.1rem]">
+        This checklist is designed for individuals navigating layoffs in
+        California. If you&apos;re in another state, check your state&apos;s
+        official government websites for location-specific guidance.
+      </p>
 
       <div className="flex flex-col gap-12">
         {SECTIONS.map((section) => (
