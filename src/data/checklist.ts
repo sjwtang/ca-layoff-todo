@@ -137,6 +137,21 @@ export const SECTIONS: ChecklistSection[] = [
         note: 'Book all those medical/dental/vision appointments asap if you have time before your coverage ends! The next available appointment with your PCP may be weeks out.',
       },
       {
+        id: 'stock-compensation',
+        title: 'Review your stock compensation, if applicable',
+        body: `<p>Your goal this week is to understand what happens to your stock awards when your employment ends and whether you need to take action before any deadlines.</p><ul><li><strong>Review your equity awards:</strong> Identify any restricted stock units (RSUs), stock options, or other equity compensation you have and review the terms of each award.</li><li><strong>Check vesting and forfeiture rules:</strong> Unvested RSUs and unvested stock options are generally forfeited when employment ends, unless your plan or separation agreement provides otherwise. Vested awards are subject to their own terms.</li><li><strong>Check stock option deadlines:</strong> If you have vested stock options, confirm the post-termination exercise deadline. It may be shorter than the original expiration date, and missing it can cause you to lose the ability to exercise.</li><li><strong>Understand your tax obligations:</strong> Vesting, exercising, and selling equity awards can have different tax implications. Review your records and consult a tax professional if needed.</li><li><strong>Save your records:</strong> Download your equity award agreements, vesting schedules, transaction history, and account statements before losing access to company systems.</li></ul><p>Your rights and deadlines depend on your equity plan, individual award agreements, and separation terms. Do not assume that vesting will continue during a notice period or WARN period.</p>`,
+        sources: [
+          {
+            label: 'SEC — Employee Stock Options',
+            url: 'https://www.investor.gov/introduction-investing/investing-basics/investment-products/employee-stock-options',
+          },
+          {
+            label: 'IRS — Publication 525: Taxable and Nontaxable Income',
+            url: 'https://www.irs.gov/publications/p525',
+          },
+        ],
+      },
+      {
         id: 'budget',
         title: 'Review your budget and pause non-essential spending',
         body: `<p>Your goal this week is to understand how long your money can cover essential expenses.</p><ul><li><strong>Add up essential expenses:</strong> Include rent or mortgage, utilities, insurance, groceries, transportation, and minimum debt payments.</li><li><strong>Estimate available funds:</strong> Include savings and any confirmed severance or unemployment benefits. Treat pending payments as estimates, not guaranteed income.</li><li><strong>Pause non-essential spending:</strong> Consider temporarily reducing subscriptions, discretionary purchases, and extra savings or investment contributions while you assess your finances.</li><li><strong>Contact creditors early:</strong> If you may miss a payment, contact your landlord, lender, or utility provider to ask about payment plans, hardship programs, or extensions. Options vary by provider.</li></ul>`,
