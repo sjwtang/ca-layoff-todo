@@ -36,7 +36,7 @@ export function ChecklistItem({
       className="scroll-mt-24 list-none border-b border-[var(--line)] last:border-b-0"
     >
       <div className="flex items-start gap-3 py-3 sm:gap-4 sm:py-3.5">
-        <label className="relative mt-1 flex h-7 w-7 shrink-0 cursor-pointer items-center justify-center">
+        <label className="relative flex h-[1lh] w-6 shrink-0 cursor-pointer items-center justify-center text-[1.2rem] leading-snug sm:text-[1.3rem]">
           <input
             type="checkbox"
             className="peer absolute inset-0 m-0 h-full w-full cursor-pointer opacity-0"
@@ -46,7 +46,7 @@ export function ChecklistItem({
           />
           <span
             className={[
-              'pointer-events-none flex h-[1.35rem] w-[1.35rem] items-center justify-center rounded-[3px] border-[1.75px] border-[var(--ink)] transition-colors duration-200',
+              'pointer-events-none flex h-[1.15em] w-[1.15em] items-center justify-center rounded-[3px] border-[1.75px] border-[var(--ink)] transition-colors duration-200',
               done ? 'bg-[var(--accent)] border-[var(--accent)]' : 'bg-transparent',
             ].join(' ')}
             aria-hidden="true"
@@ -54,7 +54,7 @@ export function ChecklistItem({
             <svg
               viewBox="0 0 24 24"
               className={[
-                'h-3.5 w-3.5 stroke-white stroke-[3] transition-opacity duration-200',
+                'h-[0.7em] w-[0.7em] stroke-white stroke-[3] transition-opacity duration-200',
                 done ? 'opacity-100' : 'opacity-0',
               ].join(' ')}
               fill="none"
@@ -68,14 +68,14 @@ export function ChecklistItem({
 
         <button
           type="button"
-          className="group flex min-h-8 flex-1 items-start justify-between gap-3 bg-transparent p-0 text-left font-[inherit] text-[1.2rem] leading-snug text-[var(--ink)] sm:text-[1.3rem]"
+          className="group flex min-h-[1lh] flex-1 items-start justify-between gap-3 bg-transparent p-0 text-left font-[inherit] text-[1.2rem] leading-snug text-[var(--ink)] sm:text-[1.3rem]"
           aria-expanded={open}
           aria-controls={panelId}
           onClick={() => onToggleOpen(item.id)}
         >
           <span
             className={[
-              'transition-colors duration-200',
+              'pt-0 transition-colors duration-200',
               done
                 ? 'text-[var(--muted)] line-through decoration-[1.5px]'
                 : '',
@@ -86,7 +86,7 @@ export function ChecklistItem({
           <svg
             viewBox="0 0 24 24"
             className={[
-              'mt-1 h-5 w-5 shrink-0 stroke-[var(--muted)] stroke-[2.2] transition-transform duration-250',
+              'mt-[0.15em] h-[1.1em] w-[1.1em] shrink-0 stroke-[var(--muted)] stroke-[2.2] transition-transform duration-250',
               open ? 'rotate-180' : '',
             ].join(' ')}
             fill="none"
