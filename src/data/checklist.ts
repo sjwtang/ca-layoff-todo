@@ -96,6 +96,7 @@ export const SECTIONS: ChecklistSection[] = [
             url: 'https://edd.ca.gov/en/uibdg/total_and_partial_unemployment_tpu_46037/',
           },
         ],
+        note: 'Even though I received a WARN Act notice, I filed for unemployment as soon as I physically stopped performing work (so, the day I was laid off). In all the EDD certifications, I am reporting my pay as "other income" each week under "WARN pay".',
       },
       {
         id: 'immigration',
