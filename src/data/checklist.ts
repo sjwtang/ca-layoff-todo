@@ -203,6 +203,7 @@ export const SECTIONS: ChecklistSection[] = [
             url: 'https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-termination-of-employment',
           },
         ],
+        note: "In the past, I have left my 401(k) in an employer's account until I got a notice that it would soon be subject to fees. After that, I ended up rolling it over to an IRA.",
       },
     ],
   },
