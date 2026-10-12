@@ -1,16 +1,16 @@
 export function SiteFooter() {
   return (
     <footer className="mx-auto mt-36 w-full max-w-3xl border-t border-[var(--line)] px-5 py-6 sm:mt-44">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
-        <div className="flex shrink-0 items-center gap-2.5">
+      <div className="flex flex-col items-start gap-3 sm:flex-row sm:justify-between sm:gap-8">
+        <div className="flex shrink-0 items-start gap-2.5">
           <img
             src="/shirley-avatar.png"
             alt=""
-            width={36}
-            height={42}
-            className="h-9 w-9 object-contain"
+            width={32}
+            height={38}
+            className="mt-0.5 h-[1.9rem] w-auto object-contain"
           />
-          <p className="m-0 text-[1.1rem]">
+          <p className="m-0 text-[1.1rem] leading-snug">
             Made by{' '}
             <a
               href="https://www.linkedin.com/in/shirleyjtang/"
