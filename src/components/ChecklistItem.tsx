@@ -1,4 +1,5 @@
 import type { ChecklistItem as Item } from '../data/checklist'
+import { ShirleyNote } from './ShirleyNote'
 
 type Props = {
   item: Item
@@ -108,12 +109,15 @@ export function ChecklistItem({
         ].join(' ')}
       >
         <div className="overflow-hidden">
-          <div
-            className="detail-body pb-4 pl-10 pr-1 text-[1.1rem] leading-relaxed text-[var(--muted)] sm:pl-11"
-            dangerouslySetInnerHTML={{
-              __html: item.body + sourcesHtml(item),
-            }}
-          />
+          <div className="pb-4 pl-10 pr-1 sm:pl-11">
+            <div
+              className="detail-body text-[1.1rem] leading-relaxed text-[var(--muted)]"
+              dangerouslySetInnerHTML={{
+                __html: item.body + sourcesHtml(item),
+              }}
+            />
+            {item.note ? <ShirleyNote note={item.note} /> : null}
+          </div>
         </div>
       </div>
     </li>

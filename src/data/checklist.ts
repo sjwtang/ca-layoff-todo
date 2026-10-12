@@ -8,6 +8,8 @@ export type ChecklistItem = {
   title: string
   body: string
   sources: SourceLink[]
+  /** Optional personal note shown at the bottom of the expanded panel. */
+  note?: string
 }
 
 export type ChecklistSection = {
@@ -36,6 +38,7 @@ export const SECTIONS: ChecklistSection[] = [
             url: 'https://www.dir.ca.gov/dlse/faq_righttoinspectpersonnelfiles.htm',
           },
         ],
+        note: 'luckily, I still had access to my email the day of layoffs. I emailed a copy of the layoff letter to my personal email to retain for my personal records.',
       },
       {
         id: 'final-paycheck',
