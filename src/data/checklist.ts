@@ -38,7 +38,7 @@ export const SECTIONS: ChecklistSection[] = [
             url: 'https://www.dir.ca.gov/dlse/faq_righttoinspectpersonnelfiles.htm',
           },
         ],
-        note: 'I still had access to my company email the day of layoffs, so I emailed a copy of the layoff letter to my personal email for my records. My company also sent an official separation packet to my personal email later as well.',
+        note: 'I still had access to my company email the day of layoffs, so I emailed a copy of the layoff letter to my personal email for my records. I was sent an official separation packet to my personal email later as well.',
       },
       {
         id: 'final-paycheck',
