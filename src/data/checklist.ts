@@ -170,7 +170,7 @@ export const SECTIONS: ChecklistSection[] = [
             url: 'https://www.dhcs.ca.gov/medi-cal-eligibility/',
           },
         ],
-        note: 'I believe CalFresh counts WARN Act pay/severance as countable income, so you won\'t be eligible until you are officially separated from your employer. In that case, I plan to apply as soon as I am officially terminated.',
+        note: 'CalFresh counts WARN Act pay/severance as countable income, so you won\'t be eligible until you are officially separated from your employer. In that case, I plan to apply as soon as I am officially terminated.',
       },
     ],
   },
