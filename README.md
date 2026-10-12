@@ -35,6 +35,7 @@ cp .env.example .env
 ## Notes
 
 - Checkmarks are stored in the browser (`localStorage`) only — nothing is sent to a server.
+- Unique visitor numbers are assigned once per browser and remembered in `localStorage` so refreshes don’t re-count you.
 - The dog doodle can be dropped in later; the site uses Inter Display.
 
 This site is general information, not legal advice.
