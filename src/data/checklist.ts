@@ -76,6 +76,7 @@ export const SECTIONS: ChecklistSection[] = [
             url: 'https://calcivilrights.ca.gov/',
           },
         ],
+        note: 'my severance was not negotiable, but in some cases, it can be. Check your terms carefully before signing anything!',
       },
       {
         id: 'unemployment',
