@@ -71,7 +71,7 @@ export function Hero() {
             <div
               id={bubbleId}
               role="status"
-              className="speech-bubble absolute bottom-[calc(100%+0.35rem)] left-1/2 z-10"
+              className="speech-bubble absolute bottom-[calc(100%+0.85rem)] left-1/2 z-10"
             >
               {SPEECHES[activeSpeech].text}
             </div>
