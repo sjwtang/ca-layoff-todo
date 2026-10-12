@@ -134,6 +134,7 @@ export const SECTIONS: ChecklistSection[] = [
             url: 'https://www.cms.gov/cciio/programs-and-initiatives/other-insurance-protections/cobra_qna',
           },
         ],
+        note: 'Book all those medical/dental/vision appointments asap if you have time before your coverage ends! The next available appointment with your PCP may be weeks out.',
       },
       {
         id: 'budget',
