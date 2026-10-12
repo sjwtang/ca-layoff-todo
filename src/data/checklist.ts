@@ -165,7 +165,7 @@ export const SECTIONS: ChecklistSection[] = [
             url: 'https://edd.ca.gov/en/unemployment/',
           },
         ],
-        note: 'I had to pause some automatic transfers (e.g., biweekly deposits to Roth IRA). That will have to wait..',
+        note: 'I had to pause some automatic transfers (e.g., biweekly deposits to Roth IRA). That will have to wait...',
       },
       {
         id: 'calfresh-medi-cal',
