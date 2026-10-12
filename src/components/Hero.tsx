@@ -1,47 +1,40 @@
 import { useEffect, useId, useRef, useState } from 'react'
 
-type DogBubble = 'orange' | 'yellow' | 'black'
+type Speech = 'orange' | 'yellow' | 'black'
 
-const BUBBLES: Record<
-  DogBubble,
-  { label: string; text: string; left: string; hitLeft: string }
-> = {
+const SPEECHES: Record<Speech, { label: string; text: string }> = {
   orange: {
     label: 'Orange dog',
     text: 'the job market is wack',
-    left: '17%',
-    hitLeft: '0%',
   },
   yellow: {
     label: 'Yellow dog',
     text: 'take a deep breath..',
-    left: '50%',
-    hitLeft: '33%',
   },
   black: {
     label: 'Black dog',
     text: "you'll be okay!",
-    left: '83%',
-    hitLeft: '66%',
   },
 }
 
+const SPEECH_ORDER: Speech[] = ['orange', 'yellow', 'black']
+
 export function Hero() {
-  const [activeDog, setActiveDog] = useState<DogBubble | null>(null)
+  const [activeSpeech, setActiveSpeech] = useState<Speech | null>(null)
   const wrapRef = useRef<HTMLDivElement>(null)
   const bubbleId = useId()
 
   useEffect(() => {
-    if (!activeDog) return
+    if (!activeSpeech) return
 
     function handlePointerDown(event: PointerEvent) {
       if (!wrapRef.current?.contains(event.target as Node)) {
-        setActiveDog(null)
+        setActiveSpeech(null)
       }
     }
 
     function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === 'Escape') setActiveDog(null)
+      if (event.key === 'Escape') setActiveSpeech(null)
     }
 
     document.addEventListener('pointerdown', handlePointerDown)
@@ -50,7 +43,15 @@ export function Hero() {
       document.removeEventListener('pointerdown', handlePointerDown)
       document.removeEventListener('keydown', handleKeyDown)
     }
-  }, [activeDog])
+  }, [activeSpeech])
+
+  function advanceSpeech() {
+    setActiveSpeech((current) => {
+      if (current === null) return SPEECH_ORDER[0]
+      const index = SPEECH_ORDER.indexOf(current)
+      return SPEECH_ORDER[(index + 1) % SPEECH_ORDER.length]
+    })
+  }
 
   return (
     <section
@@ -64,42 +65,39 @@ export function Hero() {
       <div className="flex flex-1 flex-col items-center justify-center pb-24 pt-20 sm:pb-28 sm:pt-28">
         <div
           ref={wrapRef}
-          className="animate-fade-up-delay relative w-full max-w-[9.5rem] sm:max-w-[11rem]"
+          className="animate-fade-up-delay relative w-full max-w-[8.5rem] sm:max-w-[9.5rem]"
         >
-          {activeDog ? (
+          {activeSpeech ? (
             <div
               id={bubbleId}
               role="status"
-              className="speech-bubble absolute bottom-[calc(100%+0.35rem)] z-10"
-              style={{ left: BUBBLES[activeDog].left }}
+              className="speech-bubble absolute bottom-[calc(100%+0.35rem)] left-1/2 z-10"
             >
-              {BUBBLES[activeDog].text}
+              {SPEECHES[activeSpeech].text}
             </div>
           ) : null}
 
-          <img
-            src="/dogs.png"
-            alt="Three illustrated dogs standing side by side"
-            width={849}
-            height={388}
-            className="w-full object-contain"
-            draggable={false}
-          />
-
-          {(Object.keys(BUBBLES) as DogBubble[]).map((dog) => (
-            <button
-              key={dog}
-              type="button"
-              className="absolute top-[8%] h-[84%] w-[34%] cursor-pointer border-0 bg-transparent p-0"
-              style={{ left: BUBBLES[dog].hitLeft }}
-              aria-label={BUBBLES[dog].label}
-              aria-expanded={activeDog === dog}
-              aria-controls={activeDog === dog ? bubbleId : undefined}
-              onClick={() =>
-                setActiveDog((current) => (current === dog ? null : dog))
-              }
+          <button
+            type="button"
+            className="block w-full cursor-pointer border-0 bg-transparent p-0"
+            aria-label={
+              activeSpeech
+                ? `Show next message (currently ${SPEECHES[activeSpeech].label})`
+                : 'Show a message'
+            }
+            aria-expanded={activeSpeech !== null}
+            aria-controls={activeSpeech ? bubbleId : undefined}
+            onClick={advanceSpeech}
+          >
+            <img
+              src="/sad-face.png"
+              alt="Crying yellow smiley face"
+              width={512}
+              height={512}
+              className="w-full object-contain"
+              draggable={false}
             />
-          ))}
+          </button>
         </div>
       </div>
     </section>
