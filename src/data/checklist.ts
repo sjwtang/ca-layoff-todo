@@ -54,7 +54,7 @@ export const SECTIONS: ChecklistSection[] = [
             url: 'https://edd.ca.gov/en/jobs_and_training/Layoff_Services_WARN',
           },
         ],
-        note: 'My separation packet contained all the details regarding final paychecks. I also reached out to HR for more information regarding WARN notice.',
+        note: 'My separation packet contained all the details regarding final paychecks. I also reached out to HR for more info regarding how WARN notices work.',
       },
       {
         id: 'severance',
