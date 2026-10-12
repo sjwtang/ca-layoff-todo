@@ -1,4 +1,4 @@
-# I Got Laid Off
+# Laid Off To-do List
 
 A simple starting guide for people laid off in California — a day / week / month checklist of the most urgent logistical steps, with expandable details and official source links.
 

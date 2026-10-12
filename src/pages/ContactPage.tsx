@@ -38,7 +38,7 @@ export function ContactPage() {
           name: name.trim() || undefined,
           email,
           message,
-          _subject: 'I Got Laid Off — site suggestion',
+          _subject: 'Laid Off To-do List — site suggestion',
         }),
       })
 
