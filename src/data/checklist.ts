@@ -193,7 +193,7 @@ export const SECTIONS: ChecklistSection[] = [
             url: 'https://www.dhcs.ca.gov/medi-cal-eligibility/',
           },
         ],
-        note: 'CalFresh counts WARN Act pay/severance as countable income, so you won\'t be eligible until you are officially separated from your employer. In that case, I plan to apply as soon as I am officially terminated.',
+        note: "If you're receiving WARN-related pay or severance, don't assume you're automatically ineligible for CalFresh. Payment treatment and eligibility depend on your circumstances. Contact your county benefits office or apply through BenefitsCal to find out how your income affects eligibility.",
       },
     ],
   },
