@@ -20,7 +20,8 @@ export function SiteFooter() {
             >
               Shirley
               <span className="sr-only"> (opens in a new tab)</span>
-            </a>
+            </a>{' '}
+            (your fellow laid off buddy)
           </p>
         </div>
         <p className="m-0 max-w-md text-left text-[0.95rem] leading-snug text-[var(--muted)] sm:text-right">
