@@ -68,19 +68,6 @@ html {
   outline-offset: 3px;
 }
 
-.static-home {
-  max-width: 48rem;
-  margin: 0 auto;
-  padding: 2rem 1.25rem 3rem;
-  line-height: 1.55;
-}
-
-.static-home h1,
-.static-home h2,
-.static-home h3 {
-  line-height: 1.15;
-}
-
 body {
   margin: 0;
   min-height: 100vh;
