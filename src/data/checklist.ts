@@ -96,7 +96,7 @@ export const SECTIONS: ChecklistSection[] = [
             url: 'https://edd.ca.gov/en/uibdg/total_and_partial_unemployment_tpu_46037/',
           },
         ],
-        note: 'Even though I received a WARN Act notice, I filed for unemployment as soon as I physically stopped performing work (so, the day I was laid off). In all the EDD certifications, I am reporting my pay as "other income" each week under "WARN pay".',
+        note: 'I received a WARN notice and filed the day I stopped performing work. EDD asks about other income each week, and I report my WARN pay there so EDD can decide how to treat it. Your situation may differ depending on what type of payment you receive, so read the questions carefully and answer accurately.',
       },
       {
         id: 'immigration',
