@@ -58,7 +58,7 @@ export function Hero() {
       className="mx-auto flex min-h-[100svh] w-full max-w-3xl flex-col items-center px-5 pt-28 text-center sm:pt-36"
       aria-label="Welcome"
     >
-      <p className="animate-fade-up m-0 max-w-md font-[family-name:var(--font-brand)] text-[1.75rem] leading-tight sm:text-[2.15rem]">
+      <p className="animate-fade-up m-0 max-w-md font-[family-name:var(--font-brand)] text-[2.4rem] leading-none sm:text-[2.85rem]">
         I just got laid off, now what?
       </p>
 
