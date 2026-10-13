@@ -59,7 +59,9 @@ export function Hero() {
       aria-label="Welcome"
     >
       <p className="animate-fade-up m-0 max-w-md font-[family-name:var(--font-brand)] text-[2.4rem] leading-none sm:text-[2.85rem]">
-        I just got laid off, now what?
+        I just got laid off,
+        <br />
+        now what?
       </p>
 
       <div className="flex flex-1 flex-col items-center justify-center pb-24 pt-20 sm:pb-28 sm:pt-28">
