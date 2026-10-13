@@ -26,7 +26,7 @@ export const SECTIONS: ChecklistSection[] = [
       {
         id: 'separation-notice',
         title: 'Save your separation documents and work records',
-        body: `<p>Keep copies of important employment documents for your records, ideally before you lose access to company systems.</p><ul><li><strong>Save your layoff letter or HR email:</strong> Keep details about your separation date and reason for separation.</li><li><strong>Download your employment records:</strong> Save pay stubs, performance reviews, benefits information, and your offer letter. You can also request copies of your personnel and payroll records.</li><li><strong>Keep everything somewhere accessible:</strong> Store copies securely in a personal account, and only retain company information you're authorized to keep.</li></ul>`,
+        body: `<p>Keep copies of important employment documents for your records, ideally before you lose access to company systems.</p><ul><li><strong>Save your layoff letter or HR email:</strong> Keep details about your separation date and reason for separation.</li><li><strong>Download your employment records:</strong> Save pay stubs, performance reviews, benefits information, and your offer letter. You can also request copies of your personnel and payroll records.</li><li><strong>Keep everything somewhere accessible:</strong> Store copies securely in a personal account, and only retain company information you're authorized to keep.</li><li><strong>Confirm important end dates:</strong> Check your official employment end date, health insurance coverage end date, and any stock-option exercise deadlines. These dates may differ.</li></ul>`,
         sources: [
           {
             label: 'California EDD — Required Notices and Pamphlets',
