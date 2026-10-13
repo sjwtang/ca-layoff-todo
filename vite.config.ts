@@ -45,7 +45,7 @@ function buildStaticHomeHtml(sections: ChecklistSection[]) {
     ${sectionsHtml}
   </section>
   <p>Ease back into the job search when you're ready and it feels right.</p>
-  <p>This website has been created for informational purposes only and is not offered, nor should be construed, as legal advice. Made by <a href="https://www.linkedin.com/in/shirleyjtang/">Shirley</a>.</p>
+  <p>This website has been created for informational purposes only and is not offered, nor should be construed, as legal advice. Made by <a href="https://www.linkedin.com/in/shirleyjtang/">Shirley</a> (your fellow laid off buddy).</p>
 </article>`
 }
 
