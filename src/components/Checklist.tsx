@@ -5,48 +5,53 @@ import { ChecklistItem } from './ChecklistItem'
 
 export function Checklist() {
   const { checked, toggle } = useCheckedItems()
-  const [openId, setOpenId] = useState<string | null>(null)
+  const [openIds, setOpenIds] = useState<Set<string>>(() => new Set())
 
   useEffect(() => {
     const id = decodeURIComponent((location.hash || '').slice(1))
     if (!id || id === 'todo') return
     const exists = SECTIONS.some((s) => s.items.some((it) => it.id === id))
     if (exists) {
-      setOpenId(id)
+      setOpenIds(new Set([id]))
       requestAnimationFrame(() => {
         document.getElementById(id)?.scrollIntoView({ block: 'start' })
       })
     }
   }, [])
 
-  function handleToggleOpen(id: string) {
-    setOpenId((prev) => {
-      const next = prev === id ? null : id
-      if (next) {
-        try {
-          history.replaceState(null, '', `#${next}`)
-        } catch {
-          // ignore
-        }
-      } else {
-        clearHash()
-      }
-      return next
-    })
-  }
-
-  function clearHash() {
+  function setHash(id: string | null) {
     try {
-      history.replaceState(null, '', `${location.pathname}${location.search}`)
+      if (id) {
+        history.replaceState(null, '', `#${id}`)
+      } else {
+        history.replaceState(null, '', `${location.pathname}${location.search}`)
+      }
     } catch {
       // ignore
     }
   }
 
-  function collapseAll() {
-    setOpenId(null)
-    clearHash()
+  function handleToggleOpen(id: string) {
+    setOpenIds((prev) => {
+      const next = new Set(prev)
+      if (next.has(id)) {
+        next.delete(id)
+        const remaining = next.values().next().value as string | undefined
+        setHash(remaining ?? null)
+      } else {
+        next.add(id)
+        setHash(id)
+      }
+      return next
+    })
   }
+
+  function collapseAll() {
+    setOpenIds(new Set())
+    setHash(null)
+  }
+
+  const hasOpen = openIds.size > 0
 
   return (
     <section
@@ -61,7 +66,7 @@ export function Checklist() {
         >
           To-do list
         </h2>
-        {openId ? (
+        {hasOpen ? (
           <button
             type="button"
             onClick={collapseAll}
@@ -92,7 +97,7 @@ export function Checklist() {
                   key={item.id}
                   item={item}
                   done={!!checked[item.id]}
-                  open={openId === item.id}
+                  open={openIds.has(item.id)}
                   onToggleDone={toggle}
                   onToggleOpen={handleToggleOpen}
                 />
