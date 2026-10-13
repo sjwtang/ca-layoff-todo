@@ -19,6 +19,7 @@ export function SiteFooter() {
               className="underline underline-offset-3 transition-opacity hover:opacity-70"
             >
               Shirley
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
           </p>
         </div>

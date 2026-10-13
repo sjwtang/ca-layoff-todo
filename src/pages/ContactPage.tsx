@@ -58,16 +58,24 @@ export function ContactPage() {
     }
   }
 
+  const errorId = 'contact-form-error'
+
   return (
-    <section className="animate-fade-up mx-auto w-full max-w-3xl px-5 pt-14 sm:pt-16">
+    <section
+      className="animate-fade-up mx-auto w-full max-w-3xl px-5 pt-14 sm:pt-16"
+      aria-labelledby="contact-heading"
+    >
       <Link
         to="/"
         className="text-[1.1rem] text-[var(--muted)] underline underline-offset-3 transition-opacity hover:opacity-70"
       >
-        ← Back
+        ← Back to checklist
       </Link>
 
-      <h1 className="mt-8 m-0 font-[family-name:var(--font-brand)] text-[2.4rem] leading-none sm:text-[2.85rem]">
+      <h1
+        id="contact-heading"
+        className="mt-8 m-0 font-[family-name:var(--font-brand)] text-[2.4rem] leading-none sm:text-[2.85rem]"
+      >
         Send a suggestion
       </h1>
       <p className="mt-4 max-w-lg text-[1.2rem] text-[var(--muted)]">
@@ -75,7 +83,7 @@ export function ContactPage() {
       </p>
 
       {status === 'sent' ? (
-        <div className="mt-10 max-w-lg" role="status">
+        <div className="mt-10 max-w-lg" role="status" aria-live="polite">
           <p className="m-0 text-[1.3rem]">Thanks — your note was sent.</p>
           <p className="mt-3 text-[1.15rem] text-[var(--muted)]">
             Appreciate you taking the time.
@@ -92,6 +100,7 @@ export function ContactPage() {
         <form
           className="mt-10 flex max-w-lg flex-col gap-5"
           onSubmit={handleSubmit}
+          aria-busy={status === 'sending'}
         >
           <label className="flex flex-col gap-1.5">
             <span className="text-[1.1rem]">Name (optional)</span>
@@ -112,8 +121,10 @@ export function ContactPage() {
               name="email"
               autoComplete="email"
               required
+              aria-required="true"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              aria-describedby={status === 'error' ? errorId : undefined}
               className="rounded-none border-0 border-b border-[var(--line)] bg-transparent px-0 py-2 font-[inherit] text-[1.2rem] text-[var(--ink)] outline-none transition-colors focus:border-[var(--accent)]"
             />
           </label>
@@ -123,15 +134,21 @@ export function ContactPage() {
             <textarea
               name="message"
               required
+              aria-required="true"
               rows={5}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              aria-describedby={status === 'error' ? errorId : undefined}
               className="resize-y rounded-none border border-[var(--line)] bg-[rgba(255,255,255,0.35)] px-3 py-2.5 font-[inherit] text-[1.15rem] leading-relaxed text-[var(--ink)] outline-none transition-colors focus:border-[var(--accent)]"
             />
           </label>
 
           {status === 'error' ? (
-            <p className="m-0 text-[1.05rem] text-[#8a3a2a]" role="alert">
+            <p
+              id={errorId}
+              className="m-0 text-[1.05rem] text-[#8a3a2a]"
+              role="alert"
+            >
               {errorMessage}
             </p>
           ) : null}

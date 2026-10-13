@@ -84,14 +84,14 @@ export function Checklist() {
 
       <div className="flex flex-col gap-12">
         {SECTIONS.map((section) => (
-          <div key={section.id} aria-labelledby={`h-${section.id}`}>
+          <section key={section.id} aria-labelledby={`h-${section.id}`}>
             <h3
               id={`h-${section.id}`}
               className="mb-4 m-0 font-[family-name:var(--font-brand)] text-[1.85rem] leading-none sm:text-[2.05rem]"
             >
               {section.title}
             </h3>
-            <ul className="m-0 list-none p-0">
+            <ul className="m-0 list-none p-0" role="list">
               {section.items.map((item) => (
                 <ChecklistItem
                   key={item.id}
@@ -103,7 +103,7 @@ export function Checklist() {
                 />
               ))}
             </ul>
-          </div>
+          </section>
         ))}
       </div>
     </section>

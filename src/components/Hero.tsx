@@ -4,15 +4,15 @@ type Speech = 'orange' | 'yellow' | 'black'
 
 const SPEECHES: Record<Speech, { label: string; text: string }> = {
   orange: {
-    label: 'Orange dog',
+    label: 'Message 1 of 3',
     text: 'the job market is wack',
   },
   yellow: {
-    label: 'Yellow dog',
+    label: 'Message 2 of 3',
     text: 'take a deep breath..',
   },
   black: {
-    label: 'Black dog',
+    label: 'Message 3 of 3',
     text: "you'll be okay!",
   },
 }
@@ -54,15 +54,18 @@ export function Hero() {
   }
 
   return (
-    <section
+    <header
       className="mx-auto flex min-h-[100svh] w-full max-w-3xl flex-col items-center px-5 pt-28 text-center sm:pt-36"
-      aria-label="Welcome"
+      aria-labelledby="hero-heading"
     >
-      <p className="animate-fade-up m-0 max-w-md font-[family-name:var(--font-brand)] text-[2.4rem] leading-none sm:text-[2.85rem]">
+      <h1
+        id="hero-heading"
+        className="animate-fade-up m-0 max-w-md font-[family-name:var(--font-brand)] text-[2.4rem] leading-none sm:text-[2.85rem]"
+      >
         I just got laid off,
         <br />
         now what?
-      </p>
+      </h1>
 
       <div className="flex flex-1 flex-col items-center justify-center pb-24 pt-20 sm:pb-28 sm:pt-28">
         <div
@@ -73,6 +76,8 @@ export function Hero() {
             <div
               id={bubbleId}
               role="status"
+              aria-live="polite"
+              aria-atomic="true"
               className="speech-bubble absolute bottom-[calc(100%+0.85rem)] left-1/2 z-10"
             >
               {SPEECHES[activeSpeech].text}
@@ -81,11 +86,11 @@ export function Hero() {
 
           <button
             type="button"
-            className="block w-full cursor-pointer border-0 bg-transparent p-0"
+            className="block w-full cursor-pointer rounded-full border-0 bg-transparent p-0"
             aria-label={
               activeSpeech
-                ? `Show next message (currently ${SPEECHES[activeSpeech].label})`
-                : 'Show a message'
+                ? `Show next encouragement message. ${SPEECHES[activeSpeech].label}: ${SPEECHES[activeSpeech].text}`
+                : 'Show an encouragement message'
             }
             aria-expanded={activeSpeech !== null}
             aria-controls={activeSpeech ? bubbleId : undefined}
@@ -93,7 +98,7 @@ export function Hero() {
           >
             <img
               src="/sad-face.png"
-              alt="Crying yellow smiley face"
+              alt=""
               width={512}
               height={512}
               className="w-full object-contain"
@@ -102,6 +107,6 @@ export function Hero() {
           </button>
         </div>
       </div>
-    </section>
+    </header>
   )
 }

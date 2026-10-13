@@ -29,6 +29,58 @@ html {
   scroll-padding-top: 5rem;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 100;
+  padding: 0.55rem 0.9rem;
+  border-radius: 0.35rem;
+  background: var(--ink);
+  color: #fffdf8;
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-150%);
+  transition: transform 0.15s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.static-home {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+  line-height: 1.55;
+}
+
+.static-home h1,
+.static-home h2,
+.static-home h3 {
+  line-height: 1.15;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -156,7 +208,9 @@ a {
 .detail-body .src a:focus-visible,
 button:focus-visible,
 a:focus-visible,
-input:focus-visible + span {
+input:focus-visible,
+textarea:focus-visible,
+label:focus-within .checkbox-face {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }

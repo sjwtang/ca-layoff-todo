@@ -14,7 +14,7 @@ function sourcesHtml(item: Item) {
   const links = item.sources
     .map(
       (s) =>
-        `<a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.label}</a>`,
+        `<a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.label}<span class="sr-only"> (opens in a new tab)</span></a>`,
     )
     .join(' · ')
   const label = item.sources.length > 1 ? 'Official sources' : 'Official source'
@@ -29,6 +29,7 @@ export function ChecklistItem({
   onToggleOpen,
 }: Props) {
   const panelId = `panel-${item.id}`
+  const titleId = `title-${item.id}`
 
   return (
     <li
@@ -46,7 +47,7 @@ export function ChecklistItem({
           />
           <span
             className={[
-              'pointer-events-none flex h-[1.15em] w-[1.15em] items-center justify-center rounded-[3px] border-[1.75px] border-[var(--ink)] transition-colors duration-200',
+              'checkbox-face pointer-events-none flex h-[1.15em] w-[1.15em] items-center justify-center rounded-[3px] border-[1.75px] border-[var(--ink)] transition-colors duration-200',
               done ? 'bg-[var(--accent)] border-[var(--accent)]' : 'bg-transparent',
             ].join(' ')}
             aria-hidden="true"
@@ -71,6 +72,7 @@ export function ChecklistItem({
           className="group flex min-h-[1lh] flex-1 items-start justify-between gap-3 bg-transparent p-0 text-left font-[inherit] text-[1.2rem] leading-snug text-[var(--ink)] sm:text-[1.3rem]"
           aria-expanded={open}
           aria-controls={panelId}
+          id={titleId}
           onClick={() => onToggleOpen(item.id)}
         >
           <span
@@ -93,6 +95,7 @@ export function ChecklistItem({
             strokeLinecap="round"
             strokeLinejoin="round"
             aria-hidden="true"
+            focusable="false"
           >
             <path d="M6 9l6 6 6-6" />
           </svg>
@@ -102,14 +105,12 @@ export function ChecklistItem({
       <div
         id={panelId}
         role="region"
-        aria-label={`${item.title} details`}
-        className={[
-          'grid transition-[grid-template-rows] duration-300 ease-out',
-          open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]',
-        ].join(' ')}
+        aria-labelledby={titleId}
+        hidden={!open}
+        className={open ? 'pb-4 pl-10 pr-1 sm:pl-11' : undefined}
       >
-        <div className="overflow-hidden">
-          <div className="pb-4 pl-10 pr-1 sm:pl-11">
+        {open ? (
+          <>
             <div
               className="detail-body text-[1.1rem] leading-relaxed text-[var(--muted)]"
               dangerouslySetInnerHTML={{
@@ -117,8 +118,8 @@ export function ChecklistItem({
               }}
             />
             {item.note ? <ShirleyNote note={item.note} /> : null}
-          </div>
-        </div>
+          </>
+        ) : null}
       </div>
     </li>
   )

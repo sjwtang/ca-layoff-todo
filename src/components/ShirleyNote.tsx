@@ -6,6 +6,7 @@ export function ShirleyNote({ note }: Props) {
   return (
     <aside
       className="shirley-note mt-4 flex items-start gap-3 rounded-xl border border-[var(--note-border)] bg-[var(--note-bg)] px-3.5 py-3 sm:gap-3.5 sm:px-4 sm:py-3.5"
+      role="note"
       aria-label="Shirley's note"
     >
       <img
