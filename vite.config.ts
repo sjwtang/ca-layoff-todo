@@ -53,10 +53,12 @@ function injectStaticHome(): Plugin {
   return {
     name: 'inject-static-home',
     transformIndexHtml(html) {
+      // Keep crawlable text in the HTML response, but out of the visible
+      // tree so React can mount without a flash of unstyled content.
       const staticHtml = buildStaticHomeHtml(SECTIONS)
       return html.replace(
         '<div id="root"></div>',
-        `<div id="root">${staticHtml}</div>`,
+        `<div id="root"></div>\n    <div id="static-home-content" hidden>${staticHtml}</div>`,
       )
     },
   }
