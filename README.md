@@ -1,43 +1,35 @@
-# Laid Off To-do List
+# I Got Laid Off
 
-A simple starting guide for people laid off in California — a day / week / month checklist of the most urgent logistical steps, with expandable details and official source links.
+**A practical checklist for people who've just been laid off in California.**
 
-## Run locally
+🔗 **Live website:** https://igotlaidoff.vercel.app/
 
-```bash
-npm install
-npm run dev
-```
+Getting laid off comes with a lot of paperwork, deadlines, and decisions.. often when you're least prepared to deal with them. I Got Laid Off organizes the immediate next steps into a simple checklist so people can focus on what to do next, one step at a time.
 
-Open [http://127.0.0.1:3000](http://127.0.0.1:3000).
+## What it does
 
-## Build
+The checklist organizes tasks into three timelines:
 
-```bash
-npm run build
-npm run preview
-```
+- **Do today:** Save separation documents, review final pay and severance, and start the unemployment process.
+- **This week:** Review health insurance, public benefits, budgeting, immigration considerations, and stock compensation, if applicable.
+- **This month:** Review longer-term financial tasks, including 401(k) options.
 
-## Deploy on Vercel
+Tasks include expandable explanations and links to official resources to help readers find more information.
 
-1. Push this repo to GitHub (use **Create repo** in the Cursor agent view if you haven’t yet).
-2. In [Vercel](https://vercel.com): **Add New Project** → import the GitHub repo.
-3. Framework preset: **Vite** (build `npm run build`, output `dist`).
-4. Add env var `VITE_FORMSPREE_ENDPOINT` (see below), then Deploy.
-5. `vercel.json` already rewrites routes so `/contact` works as a SPA.
+## Features
 
-## Contact form (email delivery)
+- Action-oriented checklist organized by urgency
+- Expandable details for each task
+- Links to official California and federal resources
+- Checklist progress saved locally in the browser
 
-Suggestions from the contact form are emailed via [Formspree](https://formspree.io):
+## Accuracy and scope
 
-1. Create a free Formspree form and set the notification email to yours.
-2. Copy the form endpoint (looks like `https://formspree.io/f/xxxxxxxx`).
-3. Locally: `cp .env.example .env` and set `VITE_FORMSPREE_ENDPOINT`, then restart the dev server.
-4. On Vercel: Project → Settings → Environment Variables → add the same `VITE_FORMSPREE_ENDPOINT`, then redeploy.
+This project is intended as a starting point for people navigating a layoff in California. It provides general information, not legal, tax, financial, or immigration advice.
 
-## Notes
+Eligibility, deadlines, and individual circumstances vary. Government rules and resources may change, so verify important details with the relevant agency or a qualified professional.
 
-- Checkmarks are stored in the browser (`localStorage`) only — nothing is sent to a server.
-- The site uses Inter Display.
+## Privacy
+Checklist progress is stored locally in your browser and is not sent to a server. Browser data may be lost if local site data is cleared or you switch browsers or devices.
 
 This site is general information, not legal advice.
