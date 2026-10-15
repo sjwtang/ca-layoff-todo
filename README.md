@@ -1,4 +1,4 @@
-# I Got Laid Off
+# Laid Off To-do List
 
 **A practical checklist for people who've just been laid off in California.**
 
