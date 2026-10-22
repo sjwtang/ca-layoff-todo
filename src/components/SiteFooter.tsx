@@ -2,13 +2,13 @@ export function SiteFooter() {
   return (
     <footer className="mx-auto mt-[160px] w-full max-w-3xl border-t border-[var(--line)] px-5 py-6">
       <div className="flex flex-col items-start gap-3 sm:flex-row sm:justify-between sm:gap-8">
-        <div className="flex shrink-0 items-start gap-2.5">
+        <div className="flex shrink-0 items-center gap-2.5">
           <img
             src="/shirley-avatar.png"
             alt=""
             width={32}
             height={38}
-            className="mt-0.5 h-[1.9rem] w-auto object-contain"
+            className="h-[1.9rem] w-auto object-contain"
           />
           <p className="m-0 text-[1.1rem] leading-snug">
             Made by{' '}
