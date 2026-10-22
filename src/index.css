@@ -9,7 +9,7 @@
   --panel: #f3eee4;
   --note-bg: #e3ebe4;
   --note-border: #b7c7ba;
-  --font-sans: "InterDisplay", "Inter Display", Inter, ui-sans-serif, system-ui,
+  --font-sans: "Source Sans 3", "Source Sans Pro", ui-sans-serif, system-ui,
     sans-serif;
   --font-brand: var(--font-sans);
 }
