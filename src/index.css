@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #faf6ef;
+  --bg: #f3f6f8;
   --ink: #1a1a1a;
   --muted: #5c5c5c;
   --line: #d4cfc4;
@@ -73,9 +73,9 @@ body {
   min-height: 100vh;
   background-color: var(--bg);
   background-image:
-    radial-gradient(ellipse 120% 80% at 10% -20%, rgba(210, 190, 160, 0.18), transparent 55%),
-    radial-gradient(ellipse 90% 60% at 100% 0%, rgba(190, 200, 170, 0.12), transparent 50%),
-    linear-gradient(180deg, #fbf8f2 0%, var(--bg) 40%, #f5f0e6 100%);
+    radial-gradient(ellipse 120% 80% at 10% -20%, rgba(180, 200, 220, 0.16), transparent 55%),
+    radial-gradient(ellipse 90% 60% at 100% 0%, rgba(170, 195, 185, 0.1), transparent 50%),
+    linear-gradient(180deg, #f7f9fb 0%, var(--bg) 40%, #eef2f5 100%);
   color: var(--ink);
   font-family: var(--font-sans);
   font-size: 1.0625rem;
