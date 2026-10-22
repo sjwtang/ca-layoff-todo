@@ -1,8 +1,8 @@
 export function SiteFooter() {
   return (
     <footer className="mx-auto mt-[160px] w-full max-w-3xl border-t border-[var(--line)] px-5 py-6">
-      <div className="flex flex-col items-center gap-3 text-center">
-        <div className="flex items-center justify-center gap-2.5">
+      <div className="flex flex-col items-start gap-3 sm:flex-row sm:justify-between sm:gap-8">
+        <div className="flex shrink-0 items-center gap-2.5">
           <img
             src="/shirley-avatar.png"
             alt=""
@@ -24,7 +24,7 @@ export function SiteFooter() {
             (your fellow laid off buddy)
           </p>
         </div>
-        <p className="m-0 max-w-md text-center text-[0.95rem] leading-snug text-[var(--muted)]">
+        <p className="m-0 max-w-md text-left text-[0.95rem] leading-snug text-[var(--muted)] sm:text-right">
           This website has been created for informational purposes only and is
           not offered, nor should be construed, as legal advice.
         </p>
