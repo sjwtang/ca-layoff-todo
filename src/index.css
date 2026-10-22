@@ -5,10 +5,10 @@
   --ink: #1a1a1a;
   --muted: #5c5c5c;
   --line: #d4cfc4;
-  --accent: #2f4a3a;
+  --accent: #345572;
   --panel: #f3eee4;
-  --note-bg: #e3ebe4;
-  --note-border: #b7c7ba;
+  --note-bg: #e5eef7;
+  --note-border: #b8c9d9;
   --font-sans: "Source Sans 3", "Source Sans Pro", ui-sans-serif, system-ui,
     sans-serif;
   --font-brand: var(--font-sans);
@@ -94,7 +94,7 @@ a {
 }
 
 ::selection {
-  background: rgba(47, 74, 58, 0.18);
+  background: rgba(52, 85, 114, 0.18);
 }
 
 @keyframes fade-up {
